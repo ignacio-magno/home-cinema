@@ -4,10 +4,10 @@ import {useSearchParams} from 'next/navigation';
 
 export default function Page() {
     const params = useSearchParams().get('movie');
-    const route = "movies/" + params;
+    const url = process.env.NEXT_PUBLIC_SERVER_URL + "/movie/" + params;
 
     return <div className={"flex bg-[#f5f5f5] m-auto"}>
-        <video controls src={route} datatype="video/mp4" className={"w-auto h-auto"}/>
+        <video controls src={url} datatype="video/mp4" className={"w-auto h-auto"}/>
     </div>
 }
 

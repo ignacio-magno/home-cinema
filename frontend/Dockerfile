@@ -8,7 +8,7 @@ COPY package.json /app
 
 RUN yarn install
 
-COPY . /app
+COPY .. /app
 
 RUN yarn build
 

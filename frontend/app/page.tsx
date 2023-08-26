@@ -12,7 +12,7 @@ const Home: React.FC = () => {
 
     useEffect(() => {
         try {
-            fetch('/api').then((response) => {
+            fetch(process.env.NEXT_PUBLIC_SERVER_URL ?? "").then((response) => {
                 response.json().then((data) => {
                     setFileNames(data);
                 })
